@@ -1,0 +1,11 @@
+Breadth-first Search algorithm for Java web crawler.
+---
+1. create two lists: "queue" and "visited" 
+2. input first url, check against visited
+3. if match and while queue is not empty use next url in queue
+4. if no match, add to queue and to visited
+5. read html content from url, scraping href urls
+6. check scraped urls against visited
+7. if match, go to step 3
+8. if no match, go to step 4
+9. repeat until breakpoint
