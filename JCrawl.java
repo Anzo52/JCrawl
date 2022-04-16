@@ -21,8 +21,9 @@ import java.util.List;
 import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Scanner;
  
- public class JCrawl {
+public class JCrawl {
 	
 	private Queue<String> urlQueue;
 	private List<String> visitedURLs;
@@ -95,8 +96,11 @@ import java.util.regex.Pattern;
 	
 	public static void main(String[] args) {
 		JCrawl crawler = new JCrawl();
-		// TODO: get input from scanner
-		String startURL = "STARTING_URL";  // replace with your url
-		crawler.crawl(startURL, BREAKPOINT_NUM); // replace with number of links to crawl
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a URL: ");
+		String startURL = sc.nextLine();
+		System.out.println("Enter number of links to crawl: ");
+		int breakpoint = sc.nextInt();
+		crawler.crawl(startURL, breakpoint);
 	}
 }
