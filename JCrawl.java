@@ -83,6 +83,7 @@ public class JCrawl {
 
 			if(!visitedURLs.contains(actualURL)){
 				visitedURLs.add(actualURL);
+				// TODO: output to file here
 				System.out.println("Website found with URL " + actualURL);
 				urlQueue.add(actualURL);
 			}
